@@ -12,7 +12,6 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-use linslin\yii2\curl;
 
 /**
  * Site controller
@@ -73,18 +72,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $url = 'https://missaapitest.life.com.by/api/v1/bundles/getInfoAboutTariff?tariffCode=SMP1&client=web_app';
-        $curl = new curl\Curl();
-
-        $response = $curl->get($url);
-        switch ($curl->responseCode) {
-            case 200:
-                return $response;
-                break;
-            case 404:
-                break;
-        }
-        print_r( $response ); die('2');
+        return $this->render('index');
     }
 
     /**
