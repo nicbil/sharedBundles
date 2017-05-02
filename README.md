@@ -95,3 +95,32 @@ Run npm run serve to start a local development web server. You can now access th
 Run npm run build to bundle everything into the dist folder for deployment.
 
 Run npm run build:prod to do the same as above but enabling optimisations for production.
+
+#Server
+
+## development
+npm run server
+## production
+npm run build:prod
+npm run server:prod
+
+
+
+# Build files
+## development
+npm run build:dev
+## production (jit)
+npm run build:prod
+## AoT
+npm run build:aot
+
+#github-pages
+ng github-pages:deploy --message "Optional commit message"
+
+
+#Generating and serving an Angular project via a development server
+ng new PROJECT_NAME
+cd PROJECT_NAME
+ng serve
+
+ng serve --host 0.0.0.0 --port 4201

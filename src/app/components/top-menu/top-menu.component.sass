@@ -1,0 +1,120 @@
+.wrap-top-menu
+    display: block
+    position: relative
+    height: 38px
+
+.wrap-top-menu-fixed
+    position: fixed
+    width: 100%
+    height: 38px
+    background: #FFFFFF
+    border-bottom: 2px solid #BABABA
+
+.wrap-top-menu-center
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 1000px
+    margin: 0 auto
+    height: 38px
+    align-items: center
+
+.block-top-menu-right,
+.block-social-networks,
+.block-search,
+.toolbar_sep
+    display: flex
+
+.block-social-networks
+    =image-social-network($xPosition, $yPosition)
+        width: 27px
+        height: 26px
+        margin: 0px 5px 0px 0px
+        background-size: 299px
+        background-image: url(./assets/img/icons.png)
+        background-position: $xPosition+px $yPosition+px
+        opacity: 0.8
+        cursor: pointer
+
+    .social-network__rss
+        +image-social-network(-53, 0)
+
+    .social-network__vk
+        +image-social-network(193, 0)
+
+    .social-network__facebook
+        +image-social-network(0, 0)
+
+    .social-network__twitter
+        +image-social-network(-80, 0)
+
+    .social-network__youtube
+        +image-social-network(-133, 0)
+
+    .social-network__odnoklassniki
+        +image-social-network(-26, 0)
+
+    div:hover
+        opacity: 1
+
+.block-search
+    input
+        width: 180px
+        height: 20px
+        padding-left: 8px
+        border: 1px solid #DBDBDB
+        color: #9C9C9C
+        box-shadow: inset 1px 1px 3px rgba(187, 187, 187, 0.68)
+        border-radius: 2px 0px 0px 2px
+    button
+        width: 35px
+        height: 24px
+        background: url(/assets/img/icons.png) no-repeat -200px -4px
+        background-color: #d2d2d2
+        border-radius: 0px 3px 3px 0px
+        border: 1px solid #C5C5C5
+        opacity: 0.6
+
+=button($background_color, $padding_left_right)
+    padding: 4px $padding_left_right+px
+    font-size: 15px
+    color: white
+    background-color: $background_color
+    border-radius: 4px
+    text-decoration: none
+
+.button-recharge,
+.button-personal-area,
+.button-exit
+    +button(#E63B3B, 12)
+
+.button-recharge:hover,
+.button-personal-area:hover,
+.button-exit:hover
+    background-color: #CD0202
+
+.button-help
+    +button(#888888, 12)
+
+.button-eng,
+.button-bel
+    +button(#888888, 6)
+
+.button-eng:hover,
+.button-bel:hover,
+.button-help:hover
+    background-color: #717171
+
+.toolbar_sep:after
+    content: ''
+    display: block
+    height: 15px
+    margin: 0px 8px
+    border-right: dotted 3px #B8B8B8
+    align-self: center
+
+.button-recharge,
+.button-personal-area,
+.button-help,
+.button-eng
+    margin-right: 3px
