@@ -124,3 +124,6 @@ cd PROJECT_NAME
 ng serve
 
 ng serve --host 0.0.0.0 --port 4201
+ng serve --port 4202 --live-reload-port 49153
+
+ng g components

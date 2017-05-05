@@ -48,4 +48,31 @@ return array (
       '@yii/gii' => $vendorDir . '/yiisoft/yii2-gii',
     ),
   ),
+  'skeeks/yii2-curl' => 
+  array (
+    'name' => 'skeeks/yii2-curl',
+    'version' => '1.0.2.0',
+    'alias' => 
+    array (
+      '@skeeks/yii2/curl' => $vendorDir . '/skeeks/yii2-curl',
+    ),
+  ),
+  'maxwen/yii2-curl' => 
+  array (
+    'name' => 'maxwen/yii2-curl',
+    'version' => '1.0.0.0',
+    'alias' => 
+    array (
+      '@maxwen/yii/curl' => $vendorDir . '/maxwen/yii2-curl',
+    ),
+  ),
+  'linslin/yii2-curl' => 
+  array (
+    'name' => 'linslin/yii2-curl',
+    'version' => '1.1.3.0',
+    'alias' => 
+    array (
+      '@linslin/yii2/curl' => $vendorDir . '/linslin/yii2-curl',
+    ),
+  ),
 );

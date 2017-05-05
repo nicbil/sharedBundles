@@ -8,20 +8,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-export var IndexComponent = (function () {
-    function IndexComponent() {
+export var BreadcrumbsNavigationComponent = (function () {
+    function BreadcrumbsNavigationComponent() {
     }
-    IndexComponent.prototype.ngOnInit = function () {
+    BreadcrumbsNavigationComponent.prototype.ngOnInit = function () {
     };
-    IndexComponent = __decorate([
+    BreadcrumbsNavigationComponent = __decorate([
         Component({
-            moduleId: module.id,
-            selector: 'app-index',
-            templateUrl: './index.component.html',
-            styleUrls: ['./index.component.sass']
+            selector: 'app-breadcrumbs-navigation',
+            templateUrl: './breadcrumbs-navigation.component.html',
+            styleUrls: ['./breadcrumbs-navigation.component.sass']
         }), 
         __metadata('design:paramtypes', [])
-    ], IndexComponent);
-    return IndexComponent;
+    ], BreadcrumbsNavigationComponent);
+    return BreadcrumbsNavigationComponent;
 }());
-//# sourceMappingURL=C:/xampp/htdocs/sharedBundles/src/app/pages/index/index.component.js.map
+//# sourceMappingURL=C:/xampp/htdocs/sharedBundles/src/app/components/breadcrumbs-navigation/breadcrumbs-navigation.component.js.map

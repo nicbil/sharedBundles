@@ -12,7 +12,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-
+use linslin\yii2\curl;
 /**
  * Site controller
  */
@@ -63,6 +63,23 @@ class SiteController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+
+    public function actionTariffs() {
+        $url = 'https://missaapitest.life.com.by/api/v1/bundles/getAllTariffs?client=web_app';
+
+        $curl = new curl\Curl();
+        $response = $curl->get($url);
+
+        if ($curl->errorCode === null) {
+            return $response;
+        } else {
+            switch ($curl->errorCode) {
+                case 6:
+                    //host unknown example
+                    break;
+            }
+        }
     }
 
     /**

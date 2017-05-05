@@ -10,7 +10,9 @@ import { UserComponent } from './pages/user/user.component';
 import { MainComponent } from './pages/main/main.component';
 import { TopMenuComponent } from './components/top-menu/top-menu.component';
 import { CenterMenuComponent } from './components/center-menu/center-menu.component';
-
+import { BreadcrumbsNavigationComponent } from './components/breadcrumbs-navigation/breadcrumbs-navigation.component';
+import { BlockOfTariffsComponent } from './components/block-of-tariffs/block-of-tariffs.component';
+import { IndexService } from './shared/index.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { CenterMenuComponent } from './components/center-menu/center-menu.compon
       UserComponent,
       MainComponent,
       TopMenuComponent,
-      CenterMenuComponent
+      CenterMenuComponent,
+      BreadcrumbsNavigationComponent,
+      BreadcrumbsNavigationComponent,
+      BlockOfTariffsComponent
   ],
   imports: [
       BrowserModule,
@@ -29,7 +34,9 @@ import { CenterMenuComponent } from './components/center-menu/center-menu.compon
       HttpModule,
       AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    IndexService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

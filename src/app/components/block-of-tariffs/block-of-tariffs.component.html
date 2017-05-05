@@ -1,0 +1,8 @@
+<div class="block-tariffs" *ngIf="tariffs.length">
+	<div class="block-tariff" *ngFor="let tariff of tariffs">
+		<div class="tariff-head">
+			<div class="tariffs-head-icon"></div>
+			<div class="tariffs-head-name">{{tariff.name}}</div>
+		</div>
+	</div>
+</div>

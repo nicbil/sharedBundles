@@ -18,6 +18,9 @@ import { UserComponent } from './pages/user/user.component';
 import { MainComponent } from './pages/main/main.component';
 import { TopMenuComponent } from './components/top-menu/top-menu.component';
 import { CenterMenuComponent } from './components/center-menu/center-menu.component';
+import { BreadcrumbsNavigationComponent } from './components/breadcrumbs-navigation/breadcrumbs-navigation.component';
+import { BlockOfTariffsComponent } from './components/block-of-tariffs/block-of-tariffs.component';
+import { IndexService } from './shared/index.service';
 export var AppModule = (function () {
     function AppModule() {
     }
@@ -31,7 +34,10 @@ export var AppModule = (function () {
                 UserComponent,
                 MainComponent,
                 TopMenuComponent,
-                CenterMenuComponent
+                CenterMenuComponent,
+                BreadcrumbsNavigationComponent,
+                BreadcrumbsNavigationComponent,
+                BlockOfTariffsComponent
             ],
             imports: [
                 BrowserModule,
@@ -39,7 +45,9 @@ export var AppModule = (function () {
                 HttpModule,
                 AppRoutingModule
             ],
-            providers: [],
+            providers: [
+                IndexService
+            ],
             bootstrap: [AppComponent]
         }), 
         __metadata('design:paramtypes', [])

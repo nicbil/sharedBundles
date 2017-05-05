@@ -40,6 +40,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function behaviors()
     {
+       
         return [
             TimestampBehavior::className(),
         ];
@@ -108,7 +109,7 @@ class User extends ActiveRecord implements IdentityInterface
      * @return bool
      */
     public static function isPasswordResetTokenValid($token)
-    {
+    { 
         if (empty($token)) {
             return false;
         }
