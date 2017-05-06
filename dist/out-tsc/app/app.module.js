@@ -21,6 +21,8 @@ import { CenterMenuComponent } from './components/center-menu/center-menu.compon
 import { BreadcrumbsNavigationComponent } from './components/breadcrumbs-navigation/breadcrumbs-navigation.component';
 import { BlockOfTariffsComponent } from './components/block-of-tariffs/block-of-tariffs.component';
 import { IndexService } from './shared/index.service';
+import { MobileApplicationComponent } from './components/mobile-application/mobile-application.component';
+import { FooterComponent } from './components/footer/footer.component';
 export var AppModule = (function () {
     function AppModule() {
     }
@@ -37,7 +39,9 @@ export var AppModule = (function () {
                 CenterMenuComponent,
                 BreadcrumbsNavigationComponent,
                 BreadcrumbsNavigationComponent,
-                BlockOfTariffsComponent
+                BlockOfTariffsComponent,
+                MobileApplicationComponent,
+                FooterComponent
             ],
             imports: [
                 BrowserModule,

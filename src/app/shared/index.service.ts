@@ -11,7 +11,6 @@ export class IndexService {
     private apiUrl = '/sharedBundles/frontend/web/index.php?r=site%2Ftariffs';
     constructor(private http: Http) {}
 
-
     getAllTariffs() {
         return this.http.get(this.apiUrl)
             .map(res => res.json())
@@ -23,4 +22,3 @@ export class IndexService {
         return Observable.throw(error.message || error);
     }
 }
-

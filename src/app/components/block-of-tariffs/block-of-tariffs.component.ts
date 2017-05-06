@@ -14,7 +14,7 @@ export class BlockOfTariffsComponent implements OnInit {
   	constructor(private indexService: IndexService) {
       	this.tariffs = [];
   	}
-
+  	
   	ngOnInit() {
   		this.indexService.getAllTariffs().subscribe(
   			//tariffs => this.tariffs = tariffs

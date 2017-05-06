@@ -4,5 +4,20 @@
 			<div class="tariffs-head-icon"></div>
 			<div class="tariffs-head-name">{{tariff.name}}</div>
 		</div>
+
+		<div class="tariff">{{tariff.tariffParameters[0].value}} {{tariff.tariffParameters[0].valueExt}}</div>
+
+		<div class="tariff">
+			<p [innerHTML]="tariff.tariffParameters[1].value"></p>
+			
+			{{tariff.tariffParameters[1].valueExt}}
+		</div>
+
+		<div class="tariff">
+			<p [innerHTML]="tariff.tariffParameters[2].value"></p>
+			<p [innerHTML]="tariff.tariffParameters[2].valueExt"></p> 
+		</div>
+
+		<div class="tariff">{{tariff.tariffParameters[3].value}} {{tariff.tariffParameters[3].valueExt}}</div>
 	</div>
 </div>
