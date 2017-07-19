@@ -9,29 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component } from '@angular/core';
 import { IndexService } from '../../shared/index.service';
+import { TariffsService } from '../../shared/tariffs.service';
 export var BlockOfTariffsComponent = (function () {
-    function BlockOfTariffsComponent(indexService) {
-        this.indexService = indexService;
-        this.tariffs = [];
+    function BlockOfTariffsComponent(tariffsService) {
+        this.tariffsService = tariffsService;
+        this.tariffs = this.tariffsService.getTariffs();
     }
     BlockOfTariffsComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.indexService.getAllTariffs().subscribe(
-        //tariffs => this.tariffs = tariffs
-        function (res) {
-            _this.tariffs = res;
-            console.log(_this.tariffs);
-            return _this.tariffs;
-        });
     };
     BlockOfTariffsComponent = __decorate([
         Component({
             selector: 'app-block-of-tariffs',
             templateUrl: './block-of-tariffs.component.html',
             styleUrls: ['./block-of-tariffs.component.sass'],
-            providers: [IndexService]
+            providers: [IndexService, TariffsService]
         }), 
-        __metadata('design:paramtypes', [IndexService])
+        __metadata('design:paramtypes', [TariffsService])
     ], BlockOfTariffsComponent);
     return BlockOfTariffsComponent;
 }());
