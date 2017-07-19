@@ -29,6 +29,23 @@
  * ```
  */
 return [
+    'bilenko' => [
+        'path' => 'bilenko',
+        'setWritable' => [
+            'backend/runtime',
+            'backend/web/assets',
+            'frontend/runtime',
+            'frontend/web/assets',
+        ],
+        'setExecutable' => [
+            'yii',
+            'yii_test',
+        ],
+        'setCookieValidationKey' => [
+            'backend/config/main-local.php',
+            'frontend/config/main-local.php',
+        ],
+    ],
     'Development' => [
         'path' => 'dev',
         'setWritable' => [

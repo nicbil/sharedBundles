@@ -1,40 +1,149 @@
 .block-tariffs
-	display: flex
-	flex-wrap: wrap
 	max-width: 1000px
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
 	margin: 0 auto
 
-	.block-tariff
-		width: 250px
+	.wrap-block-tariff
+		width: 234px
+		margin: 20px 0px 20px 0px
 
-	.tariff-head
-		display: flex
-
-		.tariffs-head-icon
-		    width: 70px
-		    height: 70px
-		    background: url('/assets/img/icons.png')
-		    border-radius: 70px
-		    position: relative
-		    z-index: 2
-		    background-position: 1px -40px
-
-
-		.tariffs-head-name
-			display: flex
-			align-items: center
-			justify-content: center
-			margin: 4px 0px 4px -40px
-			color: #fff
-			background-color: #593291
-			position: relative
-			z-index: 1
-			width: calc(100% - 35px)
+		.block-tariff
+			background-color: white
 			border-radius: 5px
 
-.tariff
-    display: flex
-    background-color: white
-    margin-bottom: 10px
-    border-radius: 5px
-    padding: 10px 0px 10px 5px
+			.tariff
+				display: flex
+				justify-content: space-between
+				align-items: center
+				height: 60px
+				padding: 0px 16px 0px 16px
+				border-bottom: 1px solid #EEEEEE
+
+				.tariff-name
+					color: #602B96
+					font-family: "life_text"
+					font-size: 24px
+					font-weight: bold
+					line-height: 29px
+
+				.tariff-icon
+
+
+				.tariff-minutes
+					display: flex
+					color: #212121
+					font-family: "life_regular"
+					font-size: 26px
+					font-weight: 300
+
+					div
+						opacity: 0.5
+						color: #212121
+						font-family: "life_regular"
+						font-size: 13px
+						line-height: 10px
+						margin-left: 7px
+
+					.minutes
+						color: #616161
+						font-family: "life_regular"
+						font-size: 10px
+						font-weight: bold
+
+					.span-plus_minutes
+						margin-left: 8px
+						color: #FD8E03
+
+				.tariff-internet
+					display: flex
+					color: #212121
+					font-family: "life_regular"
+					font-size: 26px
+					font-weight: 300
+					line-height: 31px
+
+					span
+						height: 26px
+						width: 117px
+						margin-left: 5px
+						opacity: 0.5
+						color: #212121
+						font-family: "life_regular"
+						font-size: 13px
+						line-height: 16px
+
+					.tariff-name
+						color: #602B96
+
+					.tariff-icon
+						background: url(/assets/img/icons.png)
+						width: 10px
+						height: 10px
+
+				.tariff-price
+					display: flex
+					align-items: center
+					color: #212121
+					font-family: "life_regular"
+					font-size: 28px
+					font-weight: bold
+					line-height: 34px
+
+					div
+						margin-left: 5px
+						line-height: 12px
+
+						.currncy
+							text-transform: uppercase
+							color: #616161
+							font-family: "life_regular"
+							font-size: 10px
+							font-weight: bold
+
+						.price
+							opacity: 0.5
+							color: #424242
+							font-family: "life_regular"
+							font-size: 13px
+							text-decoration: line-through
+
+			.lev-5
+				color: #616161
+				font-family: "life_regular"
+				font-size: 15px
+				line-height: 18px
+
+			.lev-6
+				display: flex
+				flex-direction: column
+				align-items: center
+
+				button
+					height: 42px
+					width: 206px
+					margin: 15px 0px 15px 0px
+					border-radius: 3px
+					background-color: #E63B3B
+					color: #FFFFFF
+					font-family: "life_regular"
+					font-size: 18px
+
+			.del-free
+				margin-bottom: 10px
+				opacity: 0.4
+				color: #212121
+				font-family: "life_regular"
+				font-size: 14px
+				line-height: 16px
+
+		.more-about-tariff
+			display: flex
+			justify-content: center
+			opacity: 0.6
+			color: #212121
+			font-family: "life_regular"
+			font-size: 13px
+			line-height: 30px
+			text-transform: uppercase

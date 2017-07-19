@@ -1,0 +1,73 @@
+.wrap-shadow-modal
+    background: rgba(0, 0, 0, 0.7)
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    overflow-y: hidden
+    z-index: 10
+
+.wrap-modal
+    width: 500px
+    background-color: #fefefe
+    padding: 10px 15px 15px 15px
+    margin: 15% auto
+    border: 1px solid #888
+    border-radius: 4px
+    animation-name: slideDown
+    -webkit-animation-name: slideDown
+    animation-duration: 1s
+    -webkit-animation-duration: 1s
+    visibility: visible !important
+
+@keyframes slideDown
+    0%
+        transform: translateY(-5%)
+
+    100%
+        transform: translateY(0%)
+
+.wrap-head-modal
+    display: flex
+    justify-content: space-between
+
+.close
+    cursor: pointer
+
+.modal-auth
+    .wrap-modal
+        width: 500px
+
+    .wrap-body-modal
+        padding: 20px
+
+        .title
+            text-align: center
+
+        .row-group
+            display: flex
+
+        .label
+            min-width: 160px
+
+.modal-tariffs
+    .title
+        margin-bottom: 10px
+        font-size: 14px
+        text-align: center
+    .row-group
+        display: flex
+        justify-content: center
+    a
+        margin: 0px 5px 0px 5px
+        padding: 8px
+        background-color: red
+        border-radius: 31px
+        color: white
+        font-size: 12px
+
+
+
+
+

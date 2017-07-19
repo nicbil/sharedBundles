@@ -1,0 +1,82 @@
+<div class="wrap-shadow-modal modal-auth" *ngIf="modal === 'modal_auth'">
+	<form class="wrap-modal"  #authForm="ngForm" (ngSubmit)="authentication()">
+		<div class="wrap-head-modal">
+			<div class="title"></div>
+			<div onclick="" class="close" (click)="modal = ''">&times;</div>
+		</div>
+		<div class="wrap-body-modal">
+			<div class="title">Пожалуйста, авторизуйтесь</div>
+
+			<div class="row-group">
+				<div class="label">Ваш номер life:)</div>
+				<div class="">
+					<select name="code_phone" [(ngModel)]="authObj.code_phone">
+						<option>25</option>
+						<option>29</option>
+						<option>33</option>
+						<option>43</option>
+					</select>
+				</div>
+				<input type="text" name="phone" [(ngModel)]="authObj.phone" [textMask]="{mask: phoneMask}">
+			</div>
+		
+			<div class="row-group">
+				<div class="label">Пароль</div>
+				<div class="">
+					<input type="password" name="password" [(ngModel)]="authObj.password" maxlength="50">
+				</div>
+			</div>
+
+			<div class="row-group">
+				<div class="label">e</div>
+				<div class="">
+					<input type="text" name="captcha" [(ngModel)]="authObj.captcha">
+				</div>
+			</div>
+
+			<div class="row-group">
+				<button>Войти</button>
+			</div>
+	
+			<div class="">
+				Перейти на тариф можно с помощью USSD - 
+				<span class="ussd-call">*110#</span>
+				<i class="ussd-call-img"></i>
+			</div>
+
+			<div><a (click)="modal = 'modal_tariffs'">Я ещё не абонент life:) </a></div>
+		</div>
+		<div class="wrap-bottom-modal"></div>
+	</form>
+</div>
+
+
+<div class="wrap-shadow-modal modal-tariffs" *ngIf="modal === 'modal_tariffs'">
+		<div class="wrap-modal">
+		<div class="wrap-head-modal">
+			<div class="title"></div>
+			<div onclick="" class="close" (click)="modal = ''">&times;</div>
+		</div>
+		<div class="wrap-body-modal">
+			<div class="title">Подключиться на тарифный план можно в ближайшем салоне</div>
+			<div class="row-group">
+				<a href="http://www.life.com.by/private/salons">Купить SIM-карту</a>
+				<a href="http://www.life.com.by/private/services/polnyiy_perenos_nomera/">Перенести номер на life:)</a>
+			</div>
+		</div>
+		<div class="wrap-bottom-modal"></div>
+	</div>
+</div>
+
+<!-- <div class="wrap-shadow-modal modal-test">
+		<div class="wrap-modal">
+		<div class="wrap-head-modal">
+			<div class="title"></div>
+			<div onclick="" class="close" (click)="modal_auth = false">&times;</div>
+		</div>
+		<div class="wrap-body-modal">
+
+		</div>
+		<div class="wrap-bottom-modal"></div>
+	</div>
+</div> -->

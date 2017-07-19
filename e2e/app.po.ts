@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class AnCLIPage {
+export class SrcPage {
   navigateTo() {
     return browser.get('/');
   }

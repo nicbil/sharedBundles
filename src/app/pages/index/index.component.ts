@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IndexService } from '../../shared/index.service';
 
+
 @Component({
   moduleId: module.id,
   selector: 'app-index',
@@ -9,7 +10,5 @@ import { IndexService } from '../../shared/index.service';
 })
 
 export class IndexComponent implements OnInit {
-  ngOnInit() {
-
-  }
+	ngOnInit() {}
 }

@@ -24,6 +24,10 @@ class m130524_201442_init extends Migration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
+
+        \Yii::$app->db->createCommand('INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
+            (2, \'Nicholas\', \'jcG2-TZtiHV896mo_AyUCIAhnuExc2KY\', \'$2y$13$IBLfG.2GiJbdlGV8lPC00urPCI7a5KdRixleZTECUziswt8qe3KEe\', NULL, \'nicholas.bilenko@gmail.com\', 10, 1497115130, 1497115130);
+        ')->execute();
     }
 
     public function down()

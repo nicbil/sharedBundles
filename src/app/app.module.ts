@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { PopupModule } from 'ng2-opd-popup';
 import { AppRoutingModule, routingComponents } from './app.routing';
 import { AppComponent } from './app.component';
 
@@ -15,11 +16,12 @@ import { BlockOfTariffsComponent } from './components/block-of-tariffs/block-of-
 import { IndexService } from './shared/index.service';
 import { MobileApplicationComponent } from './components/mobile-application/mobile-application.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ModalsComponent } from './components/modals/modals.component';
+import { TextMaskModule } from 'angular2-text-mask';
 
 @NgModule({
   declarations: [
       AppComponent,
-      IndexComponent,
       routingComponents,
       IndexComponent,
       UserComponent,
@@ -30,16 +32,19 @@ import { FooterComponent } from './components/footer/footer.component';
       BreadcrumbsNavigationComponent,
       BlockOfTariffsComponent,
       MobileApplicationComponent,
-      FooterComponent
+      FooterComponent,
+      ModalsComponent
   ],
   imports: [
+      TextMaskModule,
+      PopupModule.forRoot(),
       BrowserModule,
       FormsModule,
       HttpModule,
       AppRoutingModule
   ],
   providers: [
-    IndexService
+    IndexService,
   ],
   bootstrap: [AppComponent]
 })

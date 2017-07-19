@@ -1,36 +1,43 @@
-# yii console commands
-#/yii
-#/yii_test
-#/yii_test.bat
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# phpstorm project files
-.idea
+# compiled output
+#/dist
+/tmp
+/out-tsc
 
-# netbeans project files
-nbproject
+# dependencies
+node_modules
 
-# zend studio for eclipse project files
-.buildpath
+# IDEs and editors
+/.idea
 .project
-.settings
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-# windows thumbnail cache
-Thumbs.db
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-# composer vendor dir
-/vendor
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
 
-# composer itself is not needed
-#composer.phar
-
-# Mac DS_Store Files
+# e2e
+/e2e/*.js
+/e2e/*.map
+vendor
+# System Files
 .DS_Store
-
-# phpunit itself is not needed
-#phpunit.phar
-# local phpunit config
-/phpunit.xml
-
-# vagrant runtime
-/.vagrant
-/node_modules
+Thumbs.db
+yii

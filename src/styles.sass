@@ -1,27 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
 @import './node_modules/reset-css/_reset.scss'
+
+@font-face
+  font-family: 'life_medium'
+  src: url('/assets/fonts/TyponineSansLCMedium.eot') format('embedded-opentype'),url('/assets/fonts/TyponineSansLCMedium.woff2') format('woff2'),url('/assets/fonts/TyponineSansLCMedium.woff') format('woff'),url('/assets/fonts/TyponineSansLCMedium.ttf') format('truetype'),url('/assets/fonts/TyponineSansLCMedium.svg#TyponineSansLCMedium') format('svg')
+
+@font-face
+  font-family: 'life_light'
+  src: url('/assets/fonts/TyponineSansLCLight.eot') format('embedded-opentype'),url('/assets/fonts/TyponineSansLCLight.woff2') format('woff2'),url('/assets/fonts/TyponineSansLCLight.ttf') format('truetype'),url('/assets/fonts/TyponineSansLCLight.svg#TyponineSansLCLight') format('svg')
+
+@font-face
+  font-family: 'life_regular'
+  src: url('/assets/fonts/TyponineSansLCRegular.eot') format('embedded-opentype'),url('/assets/fonts/TyponineSansLCRegular.woff2') format('woff2'),url('/assets/fonts/TyponineSansLCRegular.woff') format('woff'),url('/assets/fonts/TyponineSansLCRegular.ttf') format('truetype'),url('/assets/fonts/TyponineSansLCRegular.svg#TyponineSansLCRegular') format('svg')
+
+@font-face
+  font-family: 'life_text'
+  src: local('TyponineSansLCText'),url('/assets/fonts/TyponineSansLCText.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/TyponineSansLCText.woff') format('woff'),url('/assets/fonts/TyponineSansLCText.ttf') format('truetype'),url('/assets/fonts/TyponineSansLCText.svg#Sri-TSCRegular') format('svg')
+
 body
-    font-family: 'life_text', sans-serif;
-    font-size: 20px;
-    background-color: #eeeeee
-    font-weight: 100
-    
+  font-family: 'life_text', sans-serif
+  font-size: 20px
+  background-color: #eeeeee
+  font-weight: 100
+
 input,
 button
-    outline: none
+  outline: none
 a,
 button
-    text-decoration: none
-    cursor: pointer
+  border: 0
+  text-decoration: none
+  cursor: pointer
+
+a:hover
+  text-decoration: inherit
 
 .tooltip-question
-    width: 24px
-    height: 24px
-    background: url(/assets/img/icons.png)
-    background-position: -174px -114px
-    cursor: pointer
+  width: 24px
+  height: 24px
+  background: url(/assets/img/icons.png)
+  background-position: -174px -114px
+  cursor: pointer
 
 .banner
-    max-width: 1000px
-    margin: 0 auto
-    margin-top: 20px
+  max-width: 1000px
+  margin: 0 auto
+  margin-top: 20px
+
+
+body
+  padding: 0
+  margin: 0
+  display: flex
+  flex-direction: column

@@ -11,8 +11,7 @@ import { Component } from '@angular/core';
 export var IndexComponent = (function () {
     function IndexComponent() {
     }
-    IndexComponent.prototype.ngOnInit = function () {
-    };
+    IndexComponent.prototype.ngOnInit = function () { };
     IndexComponent = __decorate([
         Component({
             moduleId: module.id,

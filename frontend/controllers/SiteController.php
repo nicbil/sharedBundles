@@ -26,12 +26,12 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
+                'only' => ['logout', 'signup', 'create', 'update', 'delete', 'index'],
                 'rules' => [
                     [
                         'actions' => ['signup'],
                         'allow' => true,
-                        'roles' => ['?'],
+                        'roles' => ['@'],
                     ],
                     [
                         'actions' => ['logout'],
@@ -63,23 +63,6 @@ class SiteController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
-    }
-
-    public function actionTariffs() {
-        $url = 'https://missaapitest.life.com.by/api/v1/bundles/getAllTariffs?client=web_app';
-
-        $curl = new curl\Curl();
-        $response = $curl->get($url);
-
-        if ($curl->errorCode === null) {
-            return $response;
-        } else {
-            switch ($curl->errorCode) {
-                case 6:
-                    //host unknown example
-                    break;
-            }
-        }
     }
 
     /**
@@ -132,6 +115,8 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
+        return $this->goHome();
+
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
@@ -155,6 +140,7 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
+        return $this->goHome();
         return $this->render('about');
     }
 

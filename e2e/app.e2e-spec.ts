@@ -1,10 +1,10 @@
-import { AnCLIPage } from './app.po';
+import { SrcPage } from './app.po';
 
-describe('an-cli App', function() {
-  let page: AnCLIPage;
+describe('src App', function() {
+  let page: SrcPage;
 
   beforeEach(() => {
-    page = new AnCLIPage();
+    page = new SrcPage();
   });
 
   it('should display message saying app works', () => {

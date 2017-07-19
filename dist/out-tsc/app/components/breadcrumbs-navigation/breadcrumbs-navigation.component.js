@@ -7,12 +7,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ModalsComponent } from '../modals/modals.component';
 export var BreadcrumbsNavigationComponent = (function () {
     function BreadcrumbsNavigationComponent() {
     }
     BreadcrumbsNavigationComponent.prototype.ngOnInit = function () {
     };
+    BreadcrumbsNavigationComponent.prototype.buttonGoToManagement = function () {
+        console.log(this.modalsComponent);
+        this.modalsComponent.modal = "modal_auth";
+    };
+    __decorate([
+        ViewChild(ModalsComponent), 
+        __metadata('design:type', ModalsComponent)
+    ], BreadcrumbsNavigationComponent.prototype, "modalsComponent", void 0);
     BreadcrumbsNavigationComponent = __decorate([
         Component({
             selector: 'app-breadcrumbs-navigation',
